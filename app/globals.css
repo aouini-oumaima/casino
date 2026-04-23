@@ -1,26 +1,667 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════
+   BEAM4MEDIA — CASINO DESIGN SYSTEM v3
+   Primary: Red #e63946 · Green #00c254
+   Base: Near-black #0a0a0a
+═══════════════════════════════════════════ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --bg:        #0a0a0a;
+  --surface:   #141414;
+  --surface-2: #1c1c1c;
+  --surface-3: #242424;
+
+  /* Borders */
+  --border:    #2a2a2a;
+  --border-2:  #333333;
+
+  /* Primary: RED */
+  --red:        #e63946;
+  --red-bright: #ff4757;
+  --red-dark:   #b02030;
+  --red-glow:   rgba(230, 57, 70, 0.4);
+  --red-mute:   rgba(230, 57, 70, 0.12);
+
+  /* Primary: GREEN */
+  --green:        #00c254;
+  --green-bright: #00e061;
+  --green-dark:   #009940;
+  --green-glow:   rgba(0, 194, 84, 0.4);
+  --green-mute:   rgba(0, 194, 84, 0.12);
+
+  /* Gold (tertiary / premium) */
+  --gold:        #f0c040;
+  --gold-bright: #ffd966;
+  --gold-dark:   #b08820;
+  --gold-glow:   rgba(240, 192, 64, 0.4);
+
+  /* Text */
+  --text:    #f8f8f8;
+  --text-2:  #aaaaaa;
+  --text-3:  #666666;
+
+  /* Suits colour mapping */
+  --spade:   #f8f8f8;
+  --heart:   var(--red);
+  --diamond: var(--red);
+  --club:    #f8f8f8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Reset ── */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body, "Inter", system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display, "Oswald", "Impact", sans-serif);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--red-dark); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--red); }
+
+/* ════════════════════════════════════
+   KEYFRAMES
+════════════════════════════════════ */
+
+/* Shimmer sweep */
+@keyframes shimmer {
+  0%   { background-position: -300% center; }
+  100% { background-position: 300% center; }
+}
+
+/* Live badge pulse */
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(230,57,70,0.7); opacity: 1; }
+  50%       { box-shadow: 0 0 0 8px rgba(230,57,70,0); opacity: 0.85; }
+}
+
+/* Green CTA pulse */
+@keyframes greenPulse {
+  0%, 100% { box-shadow: 0 0 20px var(--green-glow); }
+  50%       { box-shadow: 0 0 40px var(--green-glow), 0 0 60px rgba(0,194,84,0.2); }
+}
+
+/* Jackpot ticker */
+@keyframes ticker {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(-100%); }
+  10.01% { transform: translateY(100%); }
+  20%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+/* Roulette spin */
+@keyframes rouletteSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Roulette inner (counter) */
+@keyframes rouletteInner {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+/* Slot reel roll */
+@keyframes slotRoll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-300%); }
+}
+
+/* Card flip */
+@keyframes cardFlip {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(90deg); }
+  51%  { transform: rotateY(-90deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+/* Card fan */
+@keyframes cardFan {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  33%       { transform: rotate(-8deg) translateX(-4px); }
+  66%       { transform: rotate(8deg) translateX(4px); }
+}
+
+/* Score count up */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px) scale(0.8); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Float drift */
+@keyframes floatDrift {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.18; }
+  33%       { transform: translateY(-28px) rotate(5deg); opacity: 0.28; }
+  66%       { transform: translateY(-12px) rotate(-3deg); opacity: 0.22; }
+}
+
+@keyframes floatDriftSlow {
+  0%, 100% { transform: translateY(0px) rotate(var(--r, 0deg)); opacity: 0.14; }
+  50%       { transform: translateY(-42px) rotate(calc(var(--r, 0deg) + 8deg)); opacity: 0.24; }
+}
+
+/* Horizontal marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Border run */
+@keyframes borderRun {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Neon flicker */
+@keyframes neonFlicker {
+  0%, 92%, 100% { opacity: 1; }
+  94%            { opacity: 0.4; }
+  96%            { opacity: 1; }
+  98%            { opacity: 0.6; }
+}
+
+/* Chip bounce */
+@keyframes chipBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%       { transform: translateY(-8px) rotate(180deg); }
+  50%       { transform: translateY(0) rotate(360deg); }
+  75%       { transform: translateY(-4px) rotate(540deg); }
+}
+
+/* ════════════════════════════════════
+   UTILITY CLASSES
+════════════════════════════════════ */
+
+/* Text colour helpers */
+.text-red    { color: var(--red); }
+.text-green  { color: var(--green); }
+.text-gold   { color: var(--gold); }
+.text-muted  { color: var(--text-2); }
+
+/* Display font (Oswald) for any element */
+.font-display {
+  font-family: var(--font-display, "Oswald", sans-serif);
+}
+
+/* ── Red shimmer text ── */
+.red-text {
+  background: linear-gradient(90deg, var(--red-dark), var(--red), var(--red-bright), var(--red), var(--red-dark));
+  background-size: 300% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Green shimmer text ── */
+.green-text {
+  background: linear-gradient(90deg, var(--green-dark), var(--green), var(--green-bright), var(--green), var(--green-dark));
+  background-size: 300% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Gold shimmer text ── */
+.gold-text {
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-bright), var(--gold), var(--gold-dark));
+  background-size: 300% auto;
+  animation: shimmer 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-text-static {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-bright));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glass nav ── */
+.glass {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+/* ── Section divider ── */
+.red-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red-dark) 20%, var(--red) 50%, var(--red-dark) 80%, transparent);
+}
+.green-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-dark) 20%, var(--green) 50%, var(--green-dark) 80%, transparent);
+}
+
+/* ── Suit particles ── */
+.suit-particle {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  font-family: serif;
+  animation: floatDrift var(--dur, 8s) var(--delay, 0s) ease-in-out infinite;
+}
+
+/* ════════════════════════════════════
+   BUTTONS
+════════════════════════════════════ */
+
+/* PRIMARY — bright green, glowing */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--green-dark), var(--green), var(--green-bright));
+  color: #040a06;
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: greenPulse 3s ease-in-out infinite;
+  text-decoration: none;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.btn-primary:hover::before { transform: translateX(100%); }
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 40px var(--green-glow), 0 8px 30px rgba(0,0,0,0.5);
+  animation: none;
+}
+.btn-primary:active { transform: scale(0.98); }
+
+/* SECONDARY — red */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--red-dark), var(--red), var(--red-bright));
+  color: #fff;
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 30px var(--red-glow), 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* GHOST — outline white/grey */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  border-color: var(--text-2);
+  background: rgba(255,255,255,0.05);
+}
+
+/* GOLD (tertiary) */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-bright));
+  color: #05050a;
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--gold-glow), 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* ════════════════════════════════════
+   CASINO CARDS
+════════════════════════════════════ */
+
+.casino-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.casino-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: var(--green);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 30px var(--green-glow);
+}
+.casino-card.is-top-rated {
+  border-color: var(--gold);
+  box-shadow: 0 0 20px rgba(240,192,64,0.15);
+}
+.casino-card.is-top-rated:hover {
+  border-color: var(--gold-bright);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px var(--gold-glow);
+}
+
+/* ── LIVE badge ── */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  animation: livePulse 2s ease-in-out infinite;
+}
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  animation: livePulse 1s ease-in-out infinite;
+}
+
+/* ── Feature card ── */
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  border-color: var(--green);
+  background: var(--surface-2);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 20px var(--green-mute);
+  transform: translateY(-4px);
+}
+
+/* ── Score ring ── */
+.score-ring {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  background: conic-gradient(var(--green) calc(var(--pct, 92) * 1%), var(--surface-3) 0);
+  animation: countUp 0.8s ease-out forwards;
+}
+.score-ring::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--surface-2);
+}
+.score-ring span { position: relative; z-index: 1; }
+
+/* ── Jackpot ticker ── */
+.jackpot-digit {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.1em;
+  vertical-align: bottom;
+}
+.jackpot-digit-inner {
+  animation: ticker 3s ease-in-out infinite;
+}
+
+/* ── Privacy TOC ── */
+.privacy-toc-link:hover { color: var(--green) !important; }
+
+/* ── Marquee ── */
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ════════════════════════════════════
+   NEON & CASINO ATMOSPHERE — v4
+════════════════════════════════════ */
+
+/* Neon border pulse — green */
+@keyframes neonGreenBorder {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0,194,84,0.5), 0 0 15px rgba(0,194,84,0.25), 0 0 30px rgba(0,194,84,0.1);
+    border-color: rgba(0,194,84,0.8);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0,194,84,0.7), 0 0 25px rgba(0,194,84,0.4), 0 0 50px rgba(0,194,84,0.15);
+    border-color: #00e061;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Neon border pulse — red */
+@keyframes neonRedBorder {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(230,57,70,0.5), 0 0 15px rgba(230,57,70,0.25), 0 0 30px rgba(230,57,70,0.1);
+    border-color: rgba(230,57,70,0.8);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(230,57,70,0.7), 0 0 25px rgba(230,57,70,0.4), 0 0 50px rgba(230,57,70,0.15);
+    border-color: #ff4757;
+  }
+}
+
+/* Neon border pulse — gold */
+@keyframes neonGoldBorder {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(240,192,64,0.5), 0 0 15px rgba(240,192,64,0.25);
+    border-color: rgba(240,192,64,0.8);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(240,192,64,0.7), 0 0 25px rgba(240,192,64,0.4), 0 0 50px rgba(240,192,64,0.15);
+    border-color: #ffd966;
+  }
+}
+
+/* Chip rising particle */
+@keyframes chipRise {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.8; }
+  100% { transform: translateY(-100px) rotate(720deg) scale(0.4); opacity: 0; }
+}
+
+/* Ambient table glow pulse */
+@keyframes tablePulse {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}
+
+/* Section reveal */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Neon text classes ── */
+.neon-green-text {
+  color: var(--green);
+  text-shadow: 0 0 8px rgba(0,194,84,0.7), 0 0 20px rgba(0,194,84,0.4), 0 0 40px rgba(0,194,84,0.15);
+}
+.neon-red-text {
+  color: var(--red);
+  text-shadow: 0 0 8px rgba(230,57,70,0.7), 0 0 20px rgba(230,57,70,0.4), 0 0 40px rgba(230,57,70,0.15);
+}
+.neon-gold-text {
+  color: var(--gold);
+  text-shadow: 0 0 8px rgba(240,192,64,0.7), 0 0 20px rgba(240,192,64,0.4), 0 0 40px rgba(240,192,64,0.15);
+}
+
+/* ── Animated gradient border via shimmer pseudo-element ── */
+.neon-card {
+  position: relative;
+  isolation: isolate;
+}
+.neon-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00c254, #e63946, #f0c040, #e63946, #00c254);
+  background-size: 300%;
+  animation: shimmer 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.neon-card:hover::after { opacity: 1; }
+
+/* ── Enhanced feature card ── */
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: transparent;
+  background: #181818;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,194,84,0.5), 0 0 24px rgba(0,194,84,0.15);
+}
+
+/* ── CTA button with red hover ── */
+.btn-cta-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--green-dark), var(--green), var(--green-bright));
+  color: #040a06;
+  font-family: var(--font-display, "Oswald", sans-serif);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: greenPulse 2.5s ease-in-out infinite;
+  text-decoration: none;
+  box-shadow: 0 0 30px rgba(0,194,84,0.4), 0 8px 32px rgba(0,0,0,0.5);
+}
+.btn-cta-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--red-dark), var(--red), var(--red-bright));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.btn-cta-hero:hover::before { opacity: 1; }
+.btn-cta-hero:hover {
+  color: #fff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 40px rgba(230,57,70,0.5), 0 12px 36px rgba(0,0,0,0.6);
+  animation: none;
+}
+.btn-cta-hero:active { transform: scale(0.97); }
+.btn-cta-hero span { position: relative; z-index: 1; }
+
+/* ── Roulette glow ring ── */
+.roulette-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,194,84,0.12) 0%, rgba(240,192,64,0.08) 40%, transparent 70%);
+  animation: tablePulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Felt texture overlay ── */
+.felt-bg {
+  background-color: #080e0a;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0, 80, 30, 0.18) 0%, transparent 70%),
+    linear-gradient(rgba(0,100,40,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,100,40,0.025) 1px, transparent 1px);
+  background-size: auto, 50px 50px, 50px 50px;
+}
+
+/* ── Accessibility: large tap targets on mobile ── */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost,
+  .btn-gold,
+  .btn-cta-hero {
+    min-height: 52px;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    font-size: 16px !important;
+    border-radius: 14px !important;
+  }
+  .btn-primary,
+  .btn-cta-hero {
+    width: 100%;
+    justify-content: center;
+  }
 }
