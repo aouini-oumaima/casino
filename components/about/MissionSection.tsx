@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 const pillars = [
   {
     icon: "🏛️",
-    title: "Independência",
-    desc: "Não somos propriedade de nenhum casino. Avaliações 100% independentes e baseadas em testes reais.",
+    title: "Independence",
+    desc: "We are not owned by any casino. 100% independent reviews based on real tests.",
     color: "#e63946",
     border: "rgba(230,57,70,0.25)",
     bg: "rgba(230,57,70,0.08)",
   },
   {
     icon: "🔍",
-    title: "Transparência",
-    desc: "Divulgamos todas as relações de afiliados. A confiança é o nosso maior ativo — nunca a comprometemos.",
+    title: "Transparency",
+    desc: "We disclose all affiliate relationships. Trust is our greatest asset — we never compromise it.",
     color: "#00c254",
     border: "rgba(0,194,84,0.25)",
     bg: "rgba(0,194,84,0.08)",
   },
   {
     icon: "🛡️",
-    title: "Responsabilidade",
-    desc: "Jogo responsável é a nossa prioridade absoluta. Cada avaliação inclui recursos de suporte.",
+    title: "Responsibility",
+    desc: "Responsible gambling is our absolute priority. Every review includes support resources.",
     color: "#f0c040",
     border: "rgba(240,192,64,0.25)",
     bg: "rgba(240,192,64,0.08)",
@@ -49,11 +49,11 @@ export function MissionSection() {
               color: "#f8f8f8",
             }}
           >
-            A Nossa <span className="red-text">Missão</span>
+            Our <span className="red-text">Mission</span>
           </h2>
           <p className="text-sm leading-relaxed max-w-2xl mx-auto" style={{ color: "#666" }}>
-            Ajudar os jogadores portugueses a encontrar casinos seguros, licenciados e agradáveis.
-            Pesquisamos, testamos e avaliamos cada plataforma que recomendamos.
+            Helping players find safe, licensed and enjoyable casinos.
+            We research, test and review every platform we recommend.
           </p>
         </motion.div>
 

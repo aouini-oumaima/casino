@@ -1,119 +1,119 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade",
+  title: "Privacy Policy",
   description:
-    "Política de Privacidade da Beam4media — conformidade RGPD, dados recolhidos, direitos do utilizador. Lisboa, Portugal.",
+    "Beam4media Privacy Policy — GDPR compliance, data collected, user rights. Lisbon, Portugal.",
 };
 
 const sections = [
   {
-    id: "quem-somos",
-    title: "1. Quem Somos",
-    content: `A Beam4media é um site de avaliação e comparação de casinos online com sede em Lisboa, Portugal. Somos responsáveis pelo tratamento dos seus dados pessoais no âmbito da utilização deste site.
+    id: "who-we-are",
+    title: "1. Who We Are",
+    content: `Beam4media is an online casino review and comparison site based in Lisbon, Portugal. We are responsible for the processing of your personal data in connection with your use of this site.
 
-Contacto para questões de privacidade: contact@beam4media.com`,
+Contact for privacy questions: contact@beam4media.com`,
   },
   {
-    id: "dados-recolhidos",
-    title: "2. Que Dados Recolhemos",
-    content: `Recolhemos os seguintes tipos de dados:
+    id: "data-collected",
+    title: "2. What Data We Collect",
+    content: `We collect the following types of data:
 
-Formulário de Contacto:
-• Nome completo
-• Endereço de email
-• Assunto e conteúdo da mensagem
+Contact Form:
+• Full name
+• Email address
+• Subject and message content
 
-Analytics (anónimos):
-• Páginas visitadas (sem identificação pessoal)
-• Tipo de dispositivo e navegador
-• País de acesso (não IP específico)
-• Tempo de permanência no site
+Analytics (anonymous):
+• Pages visited (no personal identification)
+• Device type and browser
+• Country of access (not specific IP)
+• Time spent on site
 
-Não recolhemos dados financeiros, documentos de identificação ou qualquer informação sensível.`,
+We do not collect financial data, identity documents or any sensitive information.`,
   },
   {
-    id: "como-usamos",
-    title: "3. Como Utilizamos os Seus Dados",
-    content: `Utilizamos os seus dados para:
+    id: "how-we-use",
+    title: "3. How We Use Your Data",
+    content: `We use your data to:
 
-• Responder às suas questões enviadas através do formulário de contacto
-• Melhorar o conteúdo e experiência do site com base em analytics anónimos
-• Cumprir obrigações legais aplicáveis
+• Respond to your enquiries submitted via the contact form
+• Improve site content and experience based on anonymous analytics
+• Comply with applicable legal obligations
 
-Nunca vendemos, cedemos ou partilhamos os seus dados pessoais com terceiros para fins de marketing.
+We never sell, transfer or share your personal data with third parties for marketing purposes.
 
-Base legal para o tratamento: consentimento (formulário) e interesse legítimo (analytics anónimos).`,
+Legal basis for processing: consent (form) and legitimate interest (anonymous analytics).`,
   },
   {
     id: "cookies",
     title: "4. Cookies",
-    content: `Utilizamos os seguintes tipos de cookies:
+    content: `We use the following types of cookies:
 
-Cookies Técnicos (necessários):
-• Funcionamento básico do site
-• Sessão de navegação
+Technical Cookies (necessary):
+• Basic site functionality
+• Browsing session
 
-Cookies de Analytics (opcionais):
-• Google Analytics (dados anónimos e agregados)
-• Monitorização de tráfego sem identificação pessoal
+Analytics Cookies (optional):
+• Google Analytics (anonymous and aggregated data)
+• Traffic monitoring without personal identification
 
-Como gerir cookies:
-Pode desativar cookies nas definições do seu navegador. Para o Google Analytics, pode usar a extensão de opt-out disponível em tools.google.com/dlpage/gaoptout.`,
+How to manage cookies:
+You can disable cookies in your browser settings. For Google Analytics, you can use the opt-out extension available at tools.google.com/dlpage/gaoptout.`,
   },
   {
-    id: "links-terceiros",
-    title: "5. Links para Terceiros",
-    content: `Este site contém links para casinos online e outros sites externos. Quando clica nesses links, sai do nosso site e fica sujeito às políticas de privacidade desses terceiros.
+    id: "third-party-links",
+    title: "5. Third-Party Links",
+    content: `This site contains links to online casinos and other external sites. When you click those links, you leave our site and are subject to the privacy policies of those third parties.
 
-Não somos responsáveis pelas práticas de privacidade dos casinos listados ou de qualquer outro site externo. Recomendamos a leitura das políticas de privacidade de cada plataforma antes de se registar.`,
+We are not responsible for the privacy practices of the listed casinos or any other external site. We recommend reading the privacy policy of each platform before registering.`,
   },
   {
-    id: "retencao",
-    title: "6. Retenção de Dados",
-    content: `Mantemos os seus dados pessoais pelos seguintes períodos:
+    id: "retention",
+    title: "6. Data Retention",
+    content: `We retain your personal data for the following periods:
 
-• Dados do formulário de contacto: 12 meses após o último contacto
-• Analytics anónimos: processados em tempo real, sem armazenamento pessoal
-• Logs técnicos: 30 dias
+• Contact form data: 12 months after the last contact
+• Anonymous analytics: processed in real time, no personal storage
+• Technical logs: 30 days
 
-Após estes períodos, os dados são eliminados de forma segura. Pode solicitar a eliminação antecipada a qualquer momento.`,
+After these periods, data is securely deleted. You may request early deletion at any time.`,
   },
   {
-    id: "direitos",
-    title: "7. Os Seus Direitos (RGPD)",
-    content: `Ao abrigo do Regulamento Geral de Proteção de Dados (RGPD), tem os seguintes direitos:
+    id: "rights",
+    title: "7. Your Rights (GDPR)",
+    content: `Under the General Data Protection Regulation (GDPR), you have the following rights:
 
-• Direito de Acesso — solicitar cópia dos dados que temos sobre si
-• Direito de Retificação — corrigir dados incorretos ou incompletos
-• Direito de Eliminação ("direito ao esquecimento")
-• Direito de Limitação — restringir o tratamento dos seus dados
-• Direito de Portabilidade — receber os seus dados em formato estruturado
-• Direito de Oposição — opor-se ao tratamento com base em interesse legítimo
+• Right of Access — request a copy of the data we hold about you
+• Right of Rectification — correct inaccurate or incomplete data
+• Right to Erasure ("right to be forgotten")
+• Right to Restriction — restrict the processing of your data
+• Right to Portability — receive your data in a structured format
+• Right to Object — object to processing based on legitimate interest
 
-Para exercer qualquer destes direitos, contacte-nos em contact@beam4media.com. Responderemos em até 30 dias.
+To exercise any of these rights, contact us at contact@beam4media.com. We will respond within 30 days.
 
-Tem também o direito de apresentar reclamação à CNPD em www.cnpd.pt.`,
+You also have the right to lodge a complaint with the relevant data protection authority.`,
   },
   {
-    id: "contacto-dados",
-    title: "8. Contacto para Questões de Dados",
-    content: `Para qualquer questão relacionada com a proteção dos seus dados pessoais:
+    id: "data-contact",
+    title: "8. Data Enquiries Contact",
+    content: `For any question relating to the protection of your personal data:
 
 Email: contact@beam4media.com
-Assunto: "Proteção de Dados — [o seu pedido]"
-Localização: Lisboa, Portugal
+Subject: "Data Protection — [your request]"
+Location: Lisbon, Portugal
 
-Respondemos em até 30 dias úteis, conforme exigido pelo RGPD.`,
+We respond within 30 working days, as required by GDPR.`,
   },
   {
-    id: "atualizacoes",
-    title: "9. Atualizações a Esta Política",
-    content: `Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças nas nossas práticas ou na legislação aplicável.
+    id: "updates",
+    title: "9. Updates to This Policy",
+    content: `This Privacy Policy may be updated periodically to reflect changes in our practices or applicable legislation.
 
-A data da última atualização é indicada no topo desta página. Em caso de alterações significativas, informaremos os utilizadores de forma adequada.
+The date of the last update is shown at the top of this page. In the event of significant changes, we will inform users appropriately.
 
-A utilização continuada do site após alterações constitui aceitação da nova política.`,
+Continued use of the site after changes constitutes acceptance of the new policy.`,
   },
 ];
 
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest mb-6"
             style={{ background: "rgba(0,194,84,0.08)", border: "1px solid rgba(0,194,84,0.3)", color: "#00c254" }}
           >
-            ♦ RGPD Conforme
+            ♦ GDPR Compliant
           </div>
           <h1
             className="leading-tight mb-4"
@@ -150,11 +150,11 @@ export default function PrivacyPage() {
               color: "#f8f8f8",
             }}
           >
-            Política de{" "}
-            <span style={{ color: "#00c254" }}>Privacidade</span>
+            Privacy{" "}
+            <span style={{ color: "#00c254" }}>Policy</span>
           </h1>
           <p className="text-sm" style={{ color: "#666" }}>
-            Última atualização: Abril 2025 · Conformidade com RGPD (UE) 2016/679
+            Last updated: April 2025 · GDPR (EU) 2016/679 Compliance
           </p>
         </div>
       </section>
@@ -173,8 +173,8 @@ export default function PrivacyPage() {
               color: "#666",
             }}
           >
-            <strong style={{ color: "#00c254" }}>✓ Conformidade RGPD:</strong> A Beam4media cumpre
-            com o Regulamento Geral de Proteção de Dados (UE) 2016/679. Os seus dados estão seguros connosco.
+            <strong style={{ color: "#00c254" }}>✓ GDPR Compliance:</strong> Beam4media complies
+            with the General Data Protection Regulation (EU) 2016/679. Your data is safe with us.
           </div>
 
           {/* Table of contents */}
@@ -186,7 +186,7 @@ export default function PrivacyPage() {
               className="text-xs font-black uppercase tracking-widest mb-4"
               style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", color: "#00c254" }}
             >
-              ♠ Índice
+              ♠ Table of Contents
             </h2>
             <ol className="space-y-1.5">
               {sections.map((s) => (

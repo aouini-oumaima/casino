@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { TermsContent } from "@/components/TermsContent";
 
 export const metadata: Metadata = {
-  title: "Termos e Condições",
+  title: "Terms & Conditions",
   description:
-    "Termos e Condições da Beam4media — divulgação de afiliados, elegibilidade, jogo responsável e limitação de responsabilidade.",
+    "Beam4media Terms & Conditions — affiliate disclosure, eligibility, responsible gambling and limitation of liability.",
 };
 
 export default function TermsPage() {
@@ -29,7 +29,7 @@ export default function TermsPage() {
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest mb-6"
             style={{ background: "rgba(230,57,70,0.08)", border: "1px solid rgba(230,57,70,0.3)", color: "#e63946" }}
           >
-            ♣ Documentação Legal
+            ♣ Legal Documentation
           </div>
           <h1
             className="leading-tight mb-4"
@@ -40,11 +40,11 @@ export default function TermsPage() {
               color: "#f8f8f8",
             }}
           >
-            Termos e{" "}
-            <span style={{ color: "#e63946" }}>Condições</span>
+            Terms &{" "}
+            <span style={{ color: "#e63946" }}>Conditions</span>
           </h1>
           <p className="text-sm" style={{ color: "#666" }}>
-            Última atualização: Abril 2025
+            Last updated: April 2025
           </p>
         </div>
       </section>

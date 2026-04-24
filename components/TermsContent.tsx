@@ -6,92 +6,92 @@ import { ChevronDown } from "lucide-react";
 
 const sections = [
   {
-    title: "1. Introdução",
-    content: `Bem-vindo à Beam4media. Este site é um guia de afiliados de casinos online destinado a jogadores portugueses. Ao utilizar este site, concorda com os presentes Termos e Condições.
+    title: "1. Introduction",
+    content: `Welcome to Beam4media. This site is an online casino affiliate guide intended for players. By using this site, you agree to these Terms and Conditions.
 
-A Beam4media é um site de informação independente que avalia e compara casinos online licenciados pelo SRIJ em Portugal. Recebemos comissões dos casinos que recomendamos, conforme explicado na nossa política de afiliados abaixo.`,
+Beam4media is an independent information site that reviews and compares SRIJ-licensed online casinos. We receive commissions from the casinos we recommend, as explained in our affiliate policy below.`,
   },
   {
-    title: "2. Elegibilidade",
-    content: `Para utilizar este site e aceder aos casinos que recomendamos, deve:
+    title: "2. Eligibility",
+    content: `To use this site and access the casinos we recommend, you must:
 
-• Ter 18 anos ou mais (ou a idade legal mínima na sua jurisdição, se superior)
-• Residir numa jurisdição onde o jogo online é legal
-• Não estar registado em programas de autoexclusão
-• Ter capacidade legal para celebrar contratos vinculativos
+• Be 18 years of age or older (or the minimum legal age in your jurisdiction, if higher)
+• Reside in a jurisdiction where online gambling is legal
+• Not be registered in any self-exclusion programme
+• Have the legal capacity to enter into binding contracts
 
-A Beam4media não incentiva o jogo por menores. Se tiver conhecimento de alguém menor de 18 anos a utilizar este site, contacte-nos imediatamente.`,
+Beam4media does not encourage gambling by minors. If you become aware of anyone under 18 using this site, please contact us immediately.`,
   },
   {
-    title: "3. Divulgação de Afiliados",
-    content: `A Beam4media mantém relações de afiliados com alguns dos casinos listados neste site. Isto significa que podemos receber uma comissão quando um utilizador clica num link e realiza um depósito num casino recomendado.
+    title: "3. Affiliate Disclosure",
+    content: `Beam4media maintains affiliate relationships with some of the casinos listed on this site. This means we may receive a commission when a user clicks a link and makes a deposit at a recommended casino.
 
-Esta relação financeira não afeta a nossa independência editorial. As nossas avaliações são baseadas em critérios objetivos e testes independentes. Não recomendamos casinos apenas porque pagam comissões mais altas.
+This financial relationship does not affect our editorial independence. Our reviews are based on objective criteria and independent testing. We do not recommend casinos solely because they pay higher commissions.
 
-Todos os links de afiliados são claramente identificados e cada avaliação é transparente sobre a nossa relação com o casino em questão.`,
+All affiliate links are clearly identified and each review is transparent about our relationship with the casino in question.`,
   },
   {
-    title: "4. Exatidão das Informações",
-    content: `Fazemos todos os esforços para manter as informações neste site atualizadas e precisas. No entanto:
+    title: "4. Accuracy of Information",
+    content: `We make every effort to keep the information on this site up to date and accurate. However:
 
-• Os bónus e promoções mudam frequentemente — verifique sempre no site do casino antes de se registar
-• As condições dos bónus (T&Cs) são da responsabilidade dos casinos, não da Beam4media
-• As avaliações refletem a nossa opinião no momento da publicação
-• Os jogos disponíveis, métodos de pagamento e outros detalhes podem mudar sem aviso prévio
+• Bonuses and promotions change frequently — always verify on the casino's site before registering
+• Bonus terms and conditions (T&Cs) are the responsibility of the casinos, not Beam4media
+• Reviews reflect our opinion at the time of publication
+• Available games, payment methods and other details may change without prior notice
 
-Recomendamos sempre verificar as informações diretamente no site do casino antes de tomar qualquer decisão.`,
+We always recommend verifying information directly on the casino's site before making any decision.`,
   },
   {
-    title: "5. Jogo Responsável",
-    content: `A Beam4media está comprometida com a promoção do jogo responsável. O jogo deve ser encarado como entretenimento, nunca como fonte de rendimento.
+    title: "5. Responsible Gambling",
+    content: `Beam4media is committed to promoting responsible gambling. Gambling should be treated as entertainment, never as a source of income.
 
-Recursos de apoio:
-• BeGambleAware.org — apoio e informação sobre jogo problemático
-• SRIJ.turismodeportugal.pt — regulador oficial em Portugal
-• Linha de apoio gratuita: 0808 8020 133
+Support resources:
+• BeGambleAware.org — support and information on problem gambling
+• SRIJ.turismodeportugal.pt — official regulator in Portugal
+• Free support line: 0808 8020 133
 
-Utilize as ferramentas de autoexclusão disponíveis nos casinos licenciados. Se sentir que o jogo está a afetar negativamente a sua vida, procure ajuda profissional.`,
+Use the self-exclusion tools available at licensed casinos. If you feel gambling is negatively affecting your life, seek professional help.`,
   },
   {
-    title: "6. Propriedade Intelectual",
-    content: `Todo o conteúdo deste site — incluindo texto, imagens, logótipos, avaliações e design — é propriedade da Beam4media e está protegido pelas leis de direitos de autor aplicáveis.
+    title: "6. Intellectual Property",
+    content: `All content on this site — including text, images, logos, reviews and design — is the property of Beam4media and is protected by applicable copyright laws.
 
-Não pode reproduzir, distribuir ou modificar o nosso conteúdo sem autorização prévia por escrito. Pode partilhar links para as nossas páginas, desde que não seja de forma enganosa.
+You may not reproduce, distribute or modify our content without prior written authorisation. You may share links to our pages, provided it is not done in a misleading manner.
 
-As marcas e logótipos dos casinos listados são propriedade dos respetivos proprietários.`,
+The trademarks and logos of listed casinos are the property of their respective owners.`,
   },
   {
-    title: "7. Limitação de Responsabilidade",
-    content: `A Beam4media não é um operador de casino e não é responsável por:
+    title: "7. Limitation of Liability",
+    content: `Beam4media is not a casino operator and is not responsible for:
 
-• Decisões dos casinos relativamente a contas, pagamentos ou bónus
-• Perdas financeiras resultantes de jogar em qualquer casino
-• Mudanças nas ofertas dos casinos após a publicação das nossas avaliações
-• Conteúdo de sites de terceiros para os quais fornecemos links
-• Problemas técnicos nos sites dos casinos
+• Casino decisions regarding accounts, payments or bonuses
+• Financial losses resulting from playing at any casino
+• Changes to casino offerings after our reviews are published
+• Content on third-party sites to which we provide links
+• Technical issues on casino sites
 
-O uso deste site e dos casinos que recomendamos é por sua própria conta e risco.`,
+Use of this site and the casinos we recommend is at your own risk.`,
   },
   {
-    title: "8. Privacidade",
-    content: `A sua privacidade é importante para nós. Recolhemos e processamos dados pessoais de acordo com o Regulamento Geral de Proteção de Dados (RGPD) e a nossa Política de Privacidade.
+    title: "8. Privacy",
+    content: `Your privacy is important to us. We collect and process personal data in accordance with the General Data Protection Regulation (GDPR) and our Privacy Policy.
 
-Consulte a nossa Política de Privacidade completa em /privacy para entender como recolhemos, utilizamos e protegemos os seus dados pessoais.`,
+Please see our full Privacy Policy at /privacy to understand how we collect, use and protect your personal data.`,
   },
   {
-    title: "9. Alterações aos Termos",
-    content: `Reservamo-nos o direito de atualizar estes Termos e Condições a qualquer momento. As alterações entram em vigor imediatamente após publicação no site.
+    title: "9. Changes to Terms",
+    content: `We reserve the right to update these Terms and Conditions at any time. Changes take effect immediately upon publication on the site.
 
-É sua responsabilidade verificar periodicamente estes termos. A utilização continuada do site após alterações constitui aceitação dos novos termos.`,
+It is your responsibility to check these terms periodically. Continued use of the site after changes constitutes acceptance of the new terms.`,
   },
   {
-    title: "10. Contacto",
-    content: `Para questões relacionadas com estes Termos e Condições, entre em contacto connosco:
+    title: "10. Contact",
+    content: `For questions related to these Terms and Conditions, please contact us:
 
 Email: contact@beam4media.com
-Localização: Lisboa, Portugal
+Location: Lisbon, Portugal
 
-Respondemos a todas as questões em até 24 horas úteis.`,
+We respond to all enquiries within 24 business hours.`,
   },
 ];
 
@@ -186,9 +186,9 @@ export function TermsContent() {
           color: "#666",
         }}
       >
-        <strong style={{ color: "#e63946" }}>♦ Nota Importante:</strong> A Beam4media é um site de
-        afiliados. Podemos receber comissões de casinos listados neste site. Leia estes termos na
-        íntegra para compreender as nossas práticas e responsabilidades.
+        <strong style={{ color: "#e63946" }}>♦ Important Notice:</strong> Beam4media is an
+        affiliate site. We may receive commissions from casinos listed on this site. Please read
+        these terms in full to understand our practices and responsibilities.
       </div>
 
       {sections.map((s, i) => (

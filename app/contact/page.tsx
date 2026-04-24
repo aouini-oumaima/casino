@@ -3,9 +3,9 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactInfo } from "@/components/contact/ContactInfo";
 
 export const metadata: Metadata = {
-  title: "Contacto",
+  title: "Contact",
   description:
-    "Entre em contacto com a equipa Beam4media. Questões, feedback ou parcerias — respondemos em 24 horas.",
+    "Get in touch with the Beam4media team. Questions, feedback or partnerships — we reply within 24 hours.",
 };
 
 export default function ContactPage() {
@@ -32,7 +32,7 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest mb-6"
             style={{ background: "rgba(0,194,84,0.08)", border: "1px solid rgba(0,194,84,0.3)", color: "#00c254" }}
           >
-            ♦ Fale Connosco
+            ♦ Get In Touch
           </div>
           <h1
             className="leading-tight mb-4"
@@ -43,11 +43,11 @@ export default function ContactPage() {
               color: "#f8f8f8",
             }}
           >
-            Contacte a{" "}
+            Contact{" "}
             <span style={{ color: "#e63946" }}>BEAM</span><span style={{ color: "#f8f8f8" }}>4</span><span style={{ color: "#e63946" }}>MEDIA</span>
           </h1>
           <p className="text-sm" style={{ color: "#666" }}>
-            Questões, feedback ou parcerias — estamos aqui para ajudar
+            Questions, feedback or partnerships — we're here to help
           </p>
         </div>
       </section>

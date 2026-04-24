@@ -5,9 +5,9 @@ import { ReviewProcess } from "@/components/about/ReviewProcess";
 import { TeamSection } from "@/components/about/TeamSection";
 
 export const metadata: Metadata = {
-  title: "Sobre Nós",
+  title: "About Us",
   description:
-    "Conheça a Beam4media — o guia independente para casinos online licenciados em Portugal. Quem somos, como trabalhamos, porque somos diferentes.",
+    "Meet Beam4media — the independent guide to licensed online casinos. Who we are, how we work, why we're different.",
 };
 
 export default function AboutPage() {
@@ -39,7 +39,7 @@ export default function AboutPage() {
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-widest mb-6"
             style={{ background: "rgba(230,57,70,0.08)", border: "1px solid rgba(230,57,70,0.3)", color: "#e63946" }}
           >
-            ♛ Sobre a Beam4media
+            ♛ About Beam4media
           </div>
           <h1
             className="leading-tight mb-5"
@@ -50,12 +50,12 @@ export default function AboutPage() {
               color: "#f8f8f8",
             }}
           >
-            O Vosso Guia{" "}
-            <span className="red-text">Independente</span>
+            Your{" "}
+            <span className="red-text">Independent</span>{" "}Guide
           </h1>
           <p className="text-base leading-relaxed max-w-xl mx-auto" style={{ color: "#666" }}>
-            O guia de confiança para casinos online licenciados em Portugal.
-            Avaliações honestas, informação transparente, jogo responsável.
+            The trusted guide to licensed online casinos.
+            Honest reviews, transparent information, responsible gambling.
           </p>
         </div>
       </section>
@@ -82,11 +82,11 @@ export default function AboutPage() {
               color: "#f8f8f8",
             }}
           >
-            Compromisso com o Jogo Responsável
+            Commitment to Responsible Gambling
           </h2>
           <p className="text-sm leading-relaxed mb-8 max-w-xl mx-auto" style={{ color: "#666" }}>
-            Em todas as avaliações incluímos informação sobre autoexclusão e limites de depósito.
-            Acreditamos que o entretenimento saudável começa com informação honesta.
+            Every review includes information on self-exclusion and deposit limits.
+            We believe healthy entertainment starts with honest information.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a href="https://www.begambleaware.org" target="_blank" rel="noopener noreferrer"
@@ -113,13 +113,13 @@ export default function AboutPage() {
               color: "#f8f8f8",
             }}
           >
-            Tem alguma questão?
+            Have a question?
           </h2>
           <p className="text-sm mb-7" style={{ color: "#666" }}>
-            A nossa equipa está disponível para ajudar
+            Our team is available to help
           </p>
           <Link href="/contact" className="btn-primary px-8 py-4 rounded-xl font-bold text-sm no-underline inline-block" style={{ color: "#040a06" }}>
-            Contacte-nos →
+            Contact Us →
           </Link>
         </div>
       </section>

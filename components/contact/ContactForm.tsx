@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle2 } from "lucide-react";
 
 const subjects = [
-  "Questão Geral",
-  "Pedido de Avaliação de Casino",
-  "Parceria",
-  "Jogo Responsável",
-  "Outro",
+  "General Enquiry",
+  "Casino Review Request",
+  "Partnership",
+  "Responsible Gambling",
+  "Other",
 ];
 
 export function ContactForm() {
@@ -20,12 +20,12 @@ export function ContactForm() {
 
   function validate() {
     const e: Record<string, string> = {};
-    if (!form.name.trim()) e.name = "Nome obrigatório";
-    if (!form.email.trim()) e.email = "Email obrigatório";
-    else if (!/\S+@\S+\.\S+/.test(form.email)) e.email = "Email inválido";
-    if (!form.subject) e.subject = "Selecione um assunto";
-    if (!form.message.trim()) e.message = "Mensagem obrigatória";
-    else if (form.message.trim().length < 20) e.message = "Mínimo 20 caracteres";
+    if (!form.name.trim()) e.name = "Name is required";
+    if (!form.email.trim()) e.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email)) e.email = "Invalid email";
+    if (!form.subject) e.subject = "Please select a subject";
+    if (!form.message.trim()) e.message = "Message is required";
+    else if (form.message.trim().length < 20) e.message = "Minimum 20 characters";
     return e;
   }
 
@@ -79,10 +79,10 @@ export function ContactForm() {
             className="mb-3"
             style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", fontSize: "1.6rem", fontWeight: 700, color: "#f8f8f8" }}
           >
-            Mensagem Enviada!
+            Message Sent!
           </h3>
           <p className="text-sm" style={{ color: "#666" }}>
-            Obrigado pelo contacto. Responderemos em até 24h para{" "}
+            Thank you for reaching out. We'll reply within 24h to{" "}
             <strong style={{ color: "#00c254" }}>{form.email}</strong>.
           </p>
         </motion.div>
@@ -99,18 +99,18 @@ export function ContactForm() {
             className="mb-6"
             style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", fontSize: "1.3rem", fontWeight: 700, color: "#f8f8f8" }}
           >
-            Envie uma Mensagem
+            Send a Message
           </h3>
 
           <div className="space-y-5">
             {/* Name */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "#666" }}>
-                Nome *
+                Name *
               </label>
               <input
                 type="text" name="name" value={form.name} onChange={handleChange}
-                placeholder="O seu nome completo"
+                placeholder="Your full name"
                 style={fieldStyle(errors.name)}
                 onFocus={(e) => { e.currentTarget.style.borderColor = "#00c254"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0,194,84,0.1)"; }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = errors.name ? "#e63946" : "#2a2a2a"; e.currentTarget.style.boxShadow = "none"; }}
@@ -125,7 +125,7 @@ export function ContactForm() {
               </label>
               <input
                 type="email" name="email" value={form.email} onChange={handleChange}
-                placeholder="email@exemplo.com"
+                placeholder="email@example.com"
                 style={fieldStyle(errors.email)}
                 onFocus={(e) => { e.currentTarget.style.borderColor = "#00c254"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0,194,84,0.1)"; }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = errors.email ? "#e63946" : "#2a2a2a"; e.currentTarget.style.boxShadow = "none"; }}
@@ -136,7 +136,7 @@ export function ContactForm() {
             {/* Subject */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "#666" }}>
-                Assunto *
+                Subject *
               </label>
               <select
                 name="subject" value={form.subject} onChange={handleChange}
@@ -144,7 +144,7 @@ export function ContactForm() {
                 onFocus={(e) => { e.currentTarget.style.borderColor = "#00c254"; }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = errors.subject ? "#e63946" : "#2a2a2a"; }}
               >
-                <option value="" style={{ background: "#141414" }}>Selecione um assunto</option>
+                <option value="" style={{ background: "#141414" }}>Select a subject</option>
                 {subjects.map((s) => <option key={s} value={s} style={{ background: "#141414" }}>{s}</option>)}
               </select>
               {errors.subject && <p className="text-xs mt-1.5" style={{ color: "#e63946" }}>{errors.subject}</p>}
@@ -153,11 +153,11 @@ export function ContactForm() {
             {/* Message */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "#666" }}>
-                Mensagem *
+                Message *
               </label>
               <textarea
                 name="message" value={form.message} onChange={handleChange}
-                placeholder="Escreva a sua mensagem aqui..."
+                placeholder="Write your message here..."
                 rows={5}
                 style={{ ...fieldStyle(errors.message), resize: "vertical" }}
                 onFocus={(e) => { e.currentTarget.style.borderColor = "#00c254"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0,194,84,0.1)"; }}
@@ -183,10 +183,10 @@ export function ContactForm() {
                   >
                     ♠
                   </motion.span>
-                  A enviar...
+                  Sending...
                 </span>
               ) : (
-                <><Send size={15} strokeWidth={2.5} /> Enviar Mensagem</>
+                <><Send size={15} strokeWidth={2.5} /> Send Message</>
               )}
             </motion.button>
           </div>

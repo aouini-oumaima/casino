@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Clock, Lock } from "lucide-react";
 
 const cards = [
-  { icon: Mail,   label: "Email",            value: "contact@beam4media.com", link: "mailto:contact@beam4media.com", color: "#e63946", bg: "rgba(230,57,70,0.08)",  border: "rgba(230,57,70,0.2)"  },
-  { icon: MapPin, label: "Localização",       value: "Lisboa, Portugal",       link: null,                           color: "#00c254", bg: "rgba(0,194,84,0.08)",   border: "rgba(0,194,84,0.2)"   },
-  { icon: Clock,  label: "Tempo de Resposta", value: "Até 24 horas",           link: null,                           color: "#f0c040", bg: "rgba(240,192,64,0.08)", border: "rgba(240,192,64,0.2)" },
-  { icon: Lock,   label: "Confidencialidade", value: "Todas as comunicações são confidenciais", link: null,          color: "#00c254", bg: "rgba(0,194,84,0.08)",   border: "rgba(0,194,84,0.2)"   },
+  { icon: Mail,   label: "Email",           value: "contact@beam4media.com", link: "mailto:contact@beam4media.com", color: "#e63946", bg: "rgba(230,57,70,0.08)",  border: "rgba(230,57,70,0.2)"  },
+  { icon: MapPin, label: "Location",        value: "Lisbon, Portugal",        link: null,                           color: "#00c254", bg: "rgba(0,194,84,0.08)",   border: "rgba(0,194,84,0.2)"   },
+  { icon: Clock,  label: "Response Time",   value: "Within 24 hours",         link: null,                           color: "#f0c040", bg: "rgba(240,192,64,0.08)", border: "rgba(240,192,64,0.2)" },
+  { icon: Lock,   label: "Confidentiality", value: "All communications are confidential", link: null,               color: "#00c254", bg: "rgba(0,194,84,0.08)",   border: "rgba(0,194,84,0.2)"   },
 ];
 
 export function ContactInfo() {
@@ -17,7 +17,7 @@ export function ContactInfo() {
         className="mb-7"
         style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", fontSize: "1.3rem", fontWeight: 700, color: "#f8f8f8" }}
       >
-        Informações de Contacto
+        Contact Information
       </h3>
 
       <div className="space-y-3 mb-6">
@@ -75,10 +75,10 @@ export function ContactInfo() {
           className="mb-2"
           style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", fontSize: "1rem", fontWeight: 700, color: "#e63946" }}
         >
-          🆘 Precisa de Ajuda com o Jogo?
+          🆘 Need Help with Gambling?
         </h4>
         <p className="text-xs mb-4 leading-relaxed" style={{ color: "#666" }}>
-          Se o jogo estiver a afetar a sua vida, procure ajuda imediatamente. É gratuito e confidencial.
+          If gambling is affecting your life, seek help immediately. It's free and confidential.
         </p>
         <a
           href="tel:08088020133"
@@ -87,7 +87,7 @@ export function ContactInfo() {
         >
           📞 0808 8020 133
         </a>
-        <span className="text-xs block mb-3" style={{ color: "#444" }}>Linha gratuita · 24h por dia</span>
+        <span className="text-xs block mb-3" style={{ color: "#444" }}>Free helpline · 24h a day</span>
         <a
           href="https://www.begambleaware.org"
           target="_blank"

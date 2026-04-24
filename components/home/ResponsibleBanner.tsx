@@ -40,7 +40,7 @@ export function ResponsibleBanner() {
               color: "#f8f8f8",
             }}
           >
-            JOGO{" "}
+            RESPONSIBLE{" "}
             <span
               style={{
                 color: "#e63946",
@@ -48,14 +48,14 @@ export function ResponsibleBanner() {
                 animation: "neonFlicker 8s infinite",
               }}
             >
-              RESPONSÁVEL
+              GAMBLING
             </span>
           </h2>
 
           <p className="text-sm leading-relaxed max-w-2xl mx-auto mb-7" style={{ color: "#888" }}>
-            O jogo pode criar dependência. Apenas{" "}
-            <strong style={{ color: "#f8f8f8" }}>maiores de 18 anos</strong>.
-            Se o jogo estiver a afetar a sua vida, procure ajuda — é gratuito e confidencial.
+            Gambling can be addictive. For{" "}
+            <strong style={{ color: "#f8f8f8" }}>18+ only</strong>.
+            If gambling is affecting your life, seek help — it's free and confidential.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -73,7 +73,7 @@ export function ResponsibleBanner() {
               rel="noopener noreferrer"
               className="btn-ghost px-6 py-3 rounded-xl text-sm no-underline"
             >
-              SRIJ Regulador
+              SRIJ Regulator
             </a>
             <a href="tel:08088020133" className="text-sm font-bold no-underline" style={{ color: "#666" }}>
               📞 0808 8020 133
@@ -109,17 +109,17 @@ export function ResponsibleBanner() {
                 className="text-sm font-black mb-1 uppercase tracking-wide"
                 style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", color: "#00c254", letterSpacing: "0.06em" }}
               >
-                Acessível a todos — incluindo quem tem dificuldade no telemóvel
+                Accessible to everyone — including those who struggle with mobile devices
               </p>
               <p className="text-xs leading-relaxed" style={{ color: "#666" }}>
-                Este site foi desenhado com letras grandes, botões fáceis de tocar e navegação simples.
-                Se encontrar alguma dificuldade, ligue-nos:{" "}
+                This site was designed with large text, easy-to-tap buttons and simple navigation.
+                If you have any difficulty, call us:{" "}
                 <a href="tel:+351000000000" className="no-underline font-bold" style={{ color: "#00c254" }}>
                   +351 000 000 000
                 </a>{" "}
-                ou use o{" "}
+                or use the{" "}
                 <a href="/contact" className="no-underline font-bold" style={{ color: "#00c254" }}>
-                  formulário de contacto
+                  contact form
                 </a>
                 .
               </p>

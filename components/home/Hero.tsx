@@ -71,7 +71,7 @@ function PokerAnim() {
 function LiveAnim() {
   return (
     <div className="flex flex-col items-center justify-center gap-3" style={{ height: 108 }}>
-      <div className="live-badge" style={{ fontSize: 14, padding: "5px 14px", gap: 7 }}><span className="live-dot" style={{ width: 9, height: 9 }} />AO VIVO</div>
+      <div className="live-badge" style={{ fontSize: 14, padding: "5px 14px", gap: 7 }}><span className="live-dot" style={{ width: 9, height: 9 }} />LIVE</div>
       <div className="flex gap-2 items-end" style={{ height: 48 }}>
         {[...Array(9)].map((_, i) => (
           <div key={i} className="rounded"
@@ -85,7 +85,7 @@ function LiveAnim() {
 function JackpotAnim() {
   return (
     <div className="flex flex-col items-center justify-center gap-2" style={{ height: 108 }}>
-      <div className="uppercase tracking-widest" style={{ color: "#888", fontSize: 11, fontWeight: 700 }}>jackpot ao vivo</div>
+      <div className="uppercase tracking-widest" style={{ color: "#888", fontSize: 11, fontWeight: 700 }}>live jackpot</div>
       <div className="font-black leading-none"
         style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", color: "#f0c040", textShadow: "0 0 32px rgba(240,192,64,0.85)", animation: "greenPulse 2s ease-in-out infinite", fontSize: 32 }}>
         €2.847.391
@@ -103,18 +103,18 @@ function JackpotAnim() {
    DATA
 ══════════════════════════════════════ */
 const stats = [
-  { value: "50+",  label: "Casinos Avaliados", color: "#00c254" },
-  { value: "10K+", label: "Jogadores Ativos",  color: "#e63946" },
-  { value: "100%", label: "Licenciados SRIJ",  color: "#f0c040" },
+  { value: "50+",  label: "Casinos Reviewed", color: "#00c254" },
+  { value: "10K+", label: "Active Players",   color: "#e63946" },
+  { value: "100%", label: "SRIJ Licensed",    color: "#f0c040" },
 ];
 
 const GAMES = [
-  { id: "jackpots",  suit: "♦", anim: "jackpot",    isLive: false, title: "JACKPOTS",    tagline: "O próximo milionário é você.", desc: "Jackpots progressivos a crescer agora.",            color: "#f0c040", glow: "rgba(240,192,64,0.45)", bg: "#150f00", border: "rgba(240,192,64,0.4)", angle: 270 },
-  { id: "poker",     suit: "♣", anim: "poker",      isLive: false, title: "POKER",       tagline: "Leia o jogo. Domine a mesa.",  desc: "Texas Hold'em, Omaha e torneios.",                  color: "#00c254", glow: "rgba(0,194,84,0.45)",   bg: "#051508", border: "rgba(0,194,84,0.4)",   angle: 330 },
-  { id: "roulette",  suit: "♦", anim: "roulette",   isLive: false, title: "ROLETA",      tagline: "A roda nunca mente.",          desc: "Europeia, americana e francesa.",                   color: "#e63946", glow: "rgba(230,57,70,0.45)",  bg: "#1a0508", border: "rgba(230,57,70,0.4)",  angle: 30  },
-  { id: "blackjack", suit: "♠", anim: "blackjack",  isLive: false, title: "BLACKJACK",   tagline: "Bata o dealer. Seja o rei.",   desc: "21 mesas com limites para todos.",                  color: "#f8f8f8", glow: "rgba(248,248,248,0.2)", bg: "#111",   border: "rgba(255,255,255,0.18)", angle: 90  },
-  { id: "live",      suit: "♥", anim: "live",       isLive: true,  title: "LIVE CASINO", tagline: "Dealers reais. Emoção real.",  desc: "Transmissão HD com dealers 24/7.",                  color: "#e63946", glow: "rgba(230,57,70,0.5)",   bg: "#1a0508", border: "rgba(230,57,70,0.55)", angle: 150 },
-  { id: "slots",     suit: "♠", anim: "slots",      isLive: false, title: "SLOTS",       tagline: "Gire. Ganhe. Repita.",        desc: "Centenas de slots com jackpots progressivos.",      color: "#e63946", glow: "rgba(230,57,70,0.45)",  bg: "#1a0508", border: "rgba(230,57,70,0.4)",  angle: 210 },
+  { id: "jackpots",  suit: "♦", anim: "jackpot",    isLive: false, title: "JACKPOTS",    tagline: "The next millionaire is you.",  desc: "Progressive jackpots growing right now.",           color: "#f0c040", glow: "rgba(240,192,64,0.45)", bg: "#150f00", border: "rgba(240,192,64,0.4)", angle: 270 },
+  { id: "poker",     suit: "♣", anim: "poker",      isLive: false, title: "POKER",       tagline: "Read the game. Own the table.", desc: "Texas Hold'em, Omaha and tournaments.",             color: "#00c254", glow: "rgba(0,194,84,0.45)",   bg: "#051508", border: "rgba(0,194,84,0.4)",   angle: 330 },
+  { id: "roulette",  suit: "♦", anim: "roulette",   isLive: false, title: "ROULETTE",    tagline: "The wheel never lies.",         desc: "European, American and French.",                    color: "#e63946", glow: "rgba(230,57,70,0.45)",  bg: "#1a0508", border: "rgba(230,57,70,0.4)",  angle: 30  },
+  { id: "blackjack", suit: "♠", anim: "blackjack",  isLive: false, title: "BLACKJACK",   tagline: "Beat the dealer. Be the king.", desc: "21 tables with limits for everyone.",               color: "#f8f8f8", glow: "rgba(248,248,248,0.2)", bg: "#111",   border: "rgba(255,255,255,0.18)", angle: 90  },
+  { id: "live",      suit: "♥", anim: "live",       isLive: true,  title: "LIVE CASINO", tagline: "Real dealers. Real thrills.",   desc: "HD streaming with dealers 24/7.",                   color: "#e63946", glow: "rgba(230,57,70,0.5)",   bg: "#1a0508", border: "rgba(230,57,70,0.55)", angle: 150 },
+  { id: "slots",     suit: "♠", anim: "slots",      isLive: false, title: "SLOTS",       tagline: "Spin. Win. Repeat.",            desc: "Hundreds of slots with progressive jackpots.",      color: "#e63946", glow: "rgba(230,57,70,0.45)",  bg: "#1a0508", border: "rgba(230,57,70,0.4)",  angle: 210 },
 ];
 
 function GameAnim({ anim }: { anim: string }) {
@@ -195,7 +195,7 @@ function SpinArena() {
             transition={{ duration: 0.5, delay: 0.35 + i * 0.07, ease: [0.34, 1.56, 0.64, 1] }}
             whileHover={{ scale: 1.1, boxShadow: `0 0 40px ${g.glow}, 0 12px 40px rgba(0,0,0,0.8)`, borderColor: g.color, zIndex: 10 }}
             whileTap={{ scale: 0.95 }}
-            aria-label={`Jogar ${g.title}`}
+            aria-label={`Play ${g.title}`}
           >
             {/* LIVE pulse top bar */}
             {g.isLive && (
@@ -230,7 +230,7 @@ function SpinArena() {
               <p style={{ fontSize: 13, color: "#888", lineHeight: 1.5 }}>{g.desc}</p>
               <div className="mt-auto pt-2">
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 13, fontWeight: 800, color: g.color, background: `rgba(${g.color === "#f0c040" ? "240,192,64" : g.color === "#00c254" ? "0,194,84" : g.color === "#f8f8f8" ? "255,255,255" : "230,57,70"},0.15)`, border: `1px solid ${g.border}`, borderRadius: 10, padding: "8px 18px", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-                  Jogar →
+                  Play →
                 </span>
               </div>
             </div>
@@ -340,10 +340,10 @@ export function Hero() {
           <motion.div className="flex flex-col sm:flex-row gap-3 justify-center"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ...EASE }}>
-            <a href="#info" className="btn-cta-hero px-10 py-5 rounded-2xl" style={{ fontSize: 18, letterSpacing: "0.08em" }} aria-label="Começar agora">
-              <span>♠ COMEÇAR AGORA</span>
+            <a href="#info" className="btn-cta-hero px-10 py-5 rounded-2xl" style={{ fontSize: 18, letterSpacing: "0.08em" }} aria-label="Get started now">
+              <span>♠ GET STARTED</span>
             </a>
-            <Link href="/about" className="btn-ghost px-8 py-5 rounded-2xl" style={{ fontSize: 15, minHeight: 52 }}>Saiba Mais</Link>
+            <Link href="/about" className="btn-ghost px-8 py-5 rounded-2xl" style={{ fontSize: 15, minHeight: 52 }}>Learn More</Link>
           </motion.div>
 
           {/* Stats */}

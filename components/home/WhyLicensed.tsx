@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const features = [
   {
     emoji: "🔐",
-    title: "Máxima Segurança",
-    desc: "Na Beam4media, destacamos apenas plataformas licenciadas pelo SRIJ que utilizam protocolos de segurança avançados para proteger os seus dados pessoais e financeiros.",
+    title: "Maximum Security",
+    desc: "At Beam4media, we highlight only SRIJ-licensed platforms that use advanced security protocols to protect your personal and financial data.",
     color: "#00c254",
     glow: "rgba(0,194,84,0.35)",
     border: "rgba(0,194,84,0.2)",
@@ -14,8 +14,8 @@ const features = [
   },
   {
     emoji: "🎁",
-    title: "Ofertas Exclusivas",
-    desc: "Na Beam4media, encontrará os melhores bónus de boas-vindas e promoções exclusivas para jogadores em Portugal.",
+    title: "Exclusive Offers",
+    desc: "At Beam4media, you'll find the best welcome bonuses and exclusive promotions for players.",
     color: "#e63946",
     glow: "rgba(230,57,70,0.35)",
     border: "rgba(230,57,70,0.2)",
@@ -23,8 +23,8 @@ const features = [
   },
   {
     emoji: "👥",
-    title: "Comunidade Ativa",
-    desc: "Milhares de jogadores em Portugal confiam na Beam4media todos os dias para escolher os melhores sites de jogo.",
+    title: "Active Community",
+    desc: "Thousands of players trust Beam4media every day to find the best gambling sites.",
     color: "#f0c040",
     glow: "rgba(240,192,64,0.35)",
     border: "rgba(240,192,64,0.2)",
@@ -32,8 +32,8 @@ const features = [
   },
   {
     emoji: "⏰",
-    title: "Disponível 24/7",
-    desc: "Jogue quando quiser! Os casinos recomendados pela Beam4media oferecem suporte 24/7 e assistência ao vivo sempre que precisar.",
+    title: "Available 24/7",
+    desc: "Play whenever you like! Casinos recommended by Beam4media offer 24/7 support and live assistance whenever you need it.",
     color: "#00c254",
     glow: "rgba(0,194,84,0.35)",
     border: "rgba(0,194,84,0.2)",
@@ -41,8 +41,8 @@ const features = [
   },
   {
     emoji: "💳",
-    title: "Transações Seguras",
-    desc: "Os sites listados na Beam4media oferecem métodos de pagamento seguros, protegidos por tecnologia de encriptação avançada.",
+    title: "Secure Transactions",
+    desc: "Sites listed on Beam4media offer secure payment methods protected by advanced encryption technology.",
     color: "#e63946",
     glow: "rgba(230,57,70,0.35)",
     border: "rgba(230,57,70,0.2)",
@@ -50,8 +50,8 @@ const features = [
   },
   {
     emoji: "📞",
-    title: "Suporte Especializado",
-    desc: "Conte com suporte profissional em português — a equipa de apoio das plataformas parceiras da Beam4media está pronta para ajudar sempre que precisar.",
+    title: "Expert Support",
+    desc: "Count on professional support — the partner platforms' help teams are ready to assist whenever you need it.",
     color: "#f0c040",
     glow: "rgba(240,192,64,0.35)",
     border: "rgba(240,192,64,0.2)",
@@ -83,7 +83,7 @@ export function WhyLicensed() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
             style={{ background: "rgba(0,194,84,0.08)", border: "1px solid rgba(0,194,84,0.35)", color: "#00c254" }}
           >
-            ♦ Porquê Casinos Licenciados?
+            ♦ Why Licensed Casinos?
           </div>
 
           <h2
@@ -96,7 +96,7 @@ export function WhyLicensed() {
               textShadow: "0 0 40px rgba(0,194,84,0.1)",
             }}
           >
-            PORQUÊ ESCOLHER{" "}
+            WHY CHOOSE{" "}
             <span
               style={{
                 background: "linear-gradient(90deg, #009940, #00c254, #00e061, #00c254, #009940)",
@@ -108,7 +108,7 @@ export function WhyLicensed() {
                 filter: "drop-shadow(0 0 12px rgba(0,194,84,0.5))",
               }}
             >
-              CASINOS LICENCIADOS?
+              LICENSED CASINOS?
             </span>
           </h2>
 
@@ -116,9 +116,9 @@ export function WhyLicensed() {
             className="max-w-2xl mx-auto text-base leading-relaxed"
             style={{ color: "#777" }}
           >
-            Na <strong style={{ color: "#f8f8f8" }}>Beam4media</strong>, valorizamos uma experiência de jogo segura, divertida e transparente.
-            Ao apostar em plataformas licenciadas, garante a proteção dos seus dados, pagamentos justos e total conformidade com as regulamentações SRIJ —
-            para jogar sempre com tranquilidade e confiança.
+            At <strong style={{ color: "#f8f8f8" }}>Beam4media</strong>, we value a safe, enjoyable and transparent gaming experience.
+            By choosing licensed platforms, you ensure data protection, fair payments and full compliance with SRIJ regulations —
+            so you can always play with peace of mind and confidence.
           </p>
         </motion.div>
 

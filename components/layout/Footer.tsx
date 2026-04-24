@@ -3,11 +3,11 @@
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Início",                href: "/"        },
-  { label: "Sobre Nós",             href: "/about"   },
-  { label: "Contacto",              href: "/contact" },
-  { label: "Termos e Condições",    href: "/terms"   },
-  { label: "Política de Privacidade", href: "/privacy" },
+  { label: "Home",                href: "/"        },
+  { label: "About Us",            href: "/about"   },
+  { label: "Contact",             href: "/contact" },
+  { label: "Terms & Conditions",  href: "/terms"   },
+  { label: "Privacy Policy",      href: "/privacy" },
 ];
 
 export function Footer() {
@@ -40,8 +40,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-5 max-w-xs" style={{ color: "#666" }}>
-              O guia N.º 1 de casinos online licenciados em Portugal.
-              Avaliações independentes, bónus verificados, sempre actualizados.
+              The #1 guide to licensed online casinos.
+              Independent reviews, verified bonuses, always up to date.
             </p>
             {/* Trust badges */}
             <div className="flex items-center gap-2 flex-wrap">
@@ -67,7 +67,7 @@ export function Footer() {
               className="text-xs font-black uppercase tracking-widest mb-5"
               style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", color: "#e63946" }}
             >
-              Navegação
+              Navigation
             </h4>
             <div className="flex flex-col gap-2.5">
               {navLinks.map((l) => (
@@ -89,7 +89,7 @@ export function Footer() {
               className="text-xs font-black uppercase tracking-widest mb-5"
               style={{ fontFamily: "var(--font-display, Oswald, sans-serif)", color: "#e63946" }}
             >
-              Jogo Responsável
+              Responsible Gambling
             </h4>
             <div className="flex flex-col gap-3 text-sm" style={{ color: "#666" }}>
               <a href="https://www.begambleaware.org" target="_blank" rel="noopener noreferrer"
@@ -98,12 +98,12 @@ export function Footer() {
               </a>
               <a href="https://www.srij.turismodeportugal.pt" target="_blank" rel="noopener noreferrer"
                 className="no-underline hover:text-white transition-colors" style={{ color: "#666" }}>
-                → SRIJ Regulador
+                → SRIJ Regulator
               </a>
               <a href="tel:08088020133" className="no-underline" style={{ color: "#666" }}>
                 📞 0808 8020 133
               </a>
-              <span className="text-xs" style={{ color: "#444" }}>Apenas para maiores de 18 anos</span>
+              <span className="text-xs" style={{ color: "#444" }}>For 18+ only</span>
             </div>
           </div>
         </div>
@@ -113,15 +113,15 @@ export function Footer() {
           className="rounded-xl px-5 py-4 my-7 text-xs leading-relaxed"
           style={{ background: "#111", border: "1px solid #1c1c1c", color: "#444" }}
         >
-          <strong style={{ color: "#666" }}>Divulgação de afiliados:</strong>{" "}
-          A Beam4media pode receber comissões dos casinos listados neste site. Isto não afeta a nossa independência editorial.
-          Avaliações baseadas em testes independentes. Jogue responsavelmente — 18+.
+          <strong style={{ color: "#666" }}>Affiliate disclosure:</strong>{" "}
+          Beam4media may receive commissions from casinos listed on this site. This does not affect our editorial independence.
+          Reviews based on independent testing. Gamble responsibly — 18+.
         </div>
 
         {/* Bottom bar — suits decoration */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs" style={{ color: "#444" }}>
-            © {new Date().getFullYear()} Beam4media · Lisboa, Portugal
+            © {new Date().getFullYear()} Beam4media · Lisbon, Portugal
           </p>
           <div className="flex items-center gap-4">
             {["♠", "♥", "♦", "♣"].map((s, i) => (
@@ -132,7 +132,7 @@ export function Footer() {
             ))}
           </div>
           <p className="text-xs" style={{ color: "#444" }}>
-            Avaliações imparciais · Promoções verificadas
+            Impartial reviews · Verified promotions
           </p>
         </div>
       </div>

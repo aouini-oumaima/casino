@@ -6,35 +6,35 @@ const team = [
   {
     name: "João Silva",
     role: "Lead Casino Reviewer",
-    years: "8 anos",
-    bio: "Especialista em regulamentação SRIJ e auditoria de plataformas. Avaliou mais de 200 casinos na Europa.",
+    years: "8 years",
+    bio: "Specialist in SRIJ regulation and platform auditing. Has reviewed over 200 casinos across Europe.",
     topColor: "#e63946",
     initials: "JS",
-    tag: "♠ Fundador",
+    tag: "♠ Founder",
     tagColor: "#e63946",
     tagBg: "rgba(230,57,70,0.1)",
     tagBorder: "rgba(230,57,70,0.25)",
   },
   {
     name: "Ana Costa",
-    role: "Especialista em Jogo Responsável",
-    years: "6 anos",
-    bio: "Psicóloga clínica especializada em dependências. Garante recursos de suporte em cada avaliação.",
+    role: "Responsible Gambling Specialist",
+    years: "6 years",
+    bio: "Clinical psychologist specialising in addictions. Ensures support resources in every review.",
     topColor: "#00c254",
     initials: "AC",
-    tag: "♥ Saúde & Bem-estar",
+    tag: "♥ Health & Wellbeing",
     tagColor: "#00c254",
     tagBg: "rgba(0,194,84,0.1)",
     tagBorder: "rgba(0,194,84,0.25)",
   },
   {
     name: "Miguel Ferreira",
-    role: "Analista de Segurança Técnica",
-    years: "10 anos",
-    bio: "Especialista em cibersegurança. Audita SSL, firewalls e conformidade RGPD de cada plataforma.",
+    role: "Technical Security Analyst",
+    years: "10 years",
+    bio: "Cybersecurity specialist. Audits SSL, firewalls and GDPR compliance for every platform.",
     topColor: "#f0c040",
     initials: "MF",
-    tag: "♦ Segurança & Tech",
+    tag: "♦ Security & Tech",
     tagColor: "#f0c040",
     tagBg: "rgba(240,192,64,0.1)",
     tagBorder: "rgba(240,192,64,0.25)",
@@ -61,10 +61,10 @@ export function TeamSection() {
               color: "#f8f8f8",
             }}
           >
-            A Nossa <span className="gold-text">Equipa</span>
+            Our <span className="gold-text">Team</span>
           </h2>
           <p className="text-sm" style={{ color: "#666" }}>
-            Profissionais dedicados a garantir as avaliações mais rigorosas do mercado
+            Dedicated professionals delivering the most rigorous reviews in the industry
           </p>
         </motion.div>
 
@@ -115,7 +115,7 @@ export function TeamSection() {
                   {m.role}
                 </p>
                 <p className="text-xs mb-4" style={{ color: "#444" }}>
-                  {m.years} de experiência
+                  {m.years} of experience
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: "#666" }}>
                   {m.bio}

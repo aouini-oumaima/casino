@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const checks = [
-  { color: "#00c254", text: "Apenas casinos com licença SRIJ activa" },
-  { color: "#00c254", text: "T&Cs analisados — sem letra pequena escondida" },
-  { color: "#00c254", text: "Testado por jogadores reais em Portugal" },
+  { color: "#00c254", text: "Only casinos with an active SRIJ licence" },
+  { color: "#00c254", text: "T&Cs analysed — no hidden small print" },
+  { color: "#00c254", text: "Tested by real players" },
 ];
 
 export function InfoSection() {
@@ -36,7 +36,7 @@ export function InfoSection() {
               className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-5 px-3 py-1.5 rounded-full"
               style={{ border: "1px solid rgba(0,194,84,0.35)", color: "#00c254", background: "rgba(0,194,84,0.07)" }}
             >
-              ♦ Informação Essencial
+              ♦ Essential Information
             </div>
 
             <h2
@@ -48,7 +48,7 @@ export function InfoSection() {
                 color: "#f8f8f8",
               }}
             >
-              O QUE PRECISA SABER SOBRE{" "}
+              WHAT YOU NEED TO KNOW ABOUT{" "}
               <span
                 style={{
                   background: "linear-gradient(90deg, #009940, #00c254, #00e061, #00c254, #009940)",
@@ -60,19 +60,19 @@ export function InfoSection() {
                   filter: "drop-shadow(0 0 10px rgba(0,194,84,0.5))",
                 }}
               >
-                CASINOS ONLINE
+                ONLINE CASINOS
               </span>
             </h2>
 
             <div className="space-y-3 text-sm leading-relaxed mb-8" style={{ color: "#888" }}>
               <p>
-                Em Portugal, os casinos online são regulamentados pelo{" "}
-                <strong style={{ color: "#f8f8f8" }}>SRIJ</strong> — o organismo que garante
-                legalidade, segurança e transparência em todas as plataformas.
+                Online casinos are regulated by the{" "}
+                <strong style={{ color: "#f8f8f8" }}>SRIJ</strong> — the authority that ensures
+                legality, security and transparency across all platforms.
               </p>
               <p>
-                Uma <strong style={{ color: "#f8f8f8" }}>licença SRIJ válida</strong> significa
-                proteção de dados, pagamentos seguros e jogos auditados. Nunca jogue sem verificar.
+                A valid <strong style={{ color: "#f8f8f8" }}>SRIJ licence</strong> means data
+                protection, secure payments and audited games. Never play without checking.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export function InfoSection() {
               className="btn-primary px-7 py-3.5 rounded-xl text-sm"
               style={{ color: "#040a06" }}
             >
-              Fale Connosco
+              Contact Us
             </Link>
           </motion.div>
 
@@ -127,11 +127,11 @@ export function InfoSection() {
               transition={{ duration: 0.3 }}
             >
               <p className="text-sm italic leading-relaxed" style={{ color: "#777" }}>
-                &ldquo;O jogo deve ser sempre entretenimento — nunca uma fonte de rendimento.
-                Estabeleça limites e jogue com responsabilidade.&rdquo;
+                &ldquo;Gambling should always be entertainment — never a source of income.
+                Set limits and play responsibly.&rdquo;
               </p>
               <p className="text-xs mt-2 font-black uppercase tracking-wider neon-red-text">
-                — Equipa Beam4media
+                — Beam4media Team
               </p>
             </motion.div>
           </motion.div>

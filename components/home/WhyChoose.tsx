@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const features = [
-  { suit: "♠", title: "Segurança Máxima",    desc: "Só plataformas com licença SRIJ activa e SSL 256-bit.",         color: "#00c254", glow: "rgba(0,194,84,0.35)",    border: "rgba(0,194,84,0.2)"   },
-  { suit: "♥", title: "Ofertas Exclusivas",   desc: "Bónus de boas-vindas verificados e promoções só para Portugal.", color: "#e63946", glow: "rgba(230,57,70,0.35)",   border: "rgba(230,57,70,0.2)"  },
-  { suit: "♦", title: "Comunidade Ativa",     desc: "Milhares de jogadores portugueses escolhem a Beam4media.",       color: "#f0c040", glow: "rgba(240,192,64,0.35)",  border: "rgba(240,192,64,0.2)" },
-  { suit: "♣", title: "Disponível 24/7",      desc: "Suporte ao vivo a qualquer hora — nunca fica sem resposta.",     color: "#00c254", glow: "rgba(0,194,84,0.35)",    border: "rgba(0,194,84,0.2)"   },
-  { suit: "♠", title: "Transações Seguras",   desc: "Depósitos e levantamentos com encriptação de ponta a ponta.",   color: "#e63946", glow: "rgba(230,57,70,0.35)",   border: "rgba(230,57,70,0.2)"  },
-  { suit: "♥", title: "Apoio Especializado",  desc: "Equipa portuguesa especializada — resposta real, não bots.",     color: "#f0c040", glow: "rgba(240,192,64,0.35)",  border: "rgba(240,192,64,0.2)" },
+  { suit: "♠", title: "Maximum Security",     desc: "Only platforms with an active SRIJ licence and 256-bit SSL.",   color: "#00c254", glow: "rgba(0,194,84,0.35)",    border: "rgba(0,194,84,0.2)"   },
+  { suit: "♥", title: "Exclusive Offers",     desc: "Verified welcome bonuses and promotions for our readers.",       color: "#e63946", glow: "rgba(230,57,70,0.35)",   border: "rgba(230,57,70,0.2)"  },
+  { suit: "♦", title: "Active Community",     desc: "Thousands of players choose Beam4media every day.",              color: "#f0c040", glow: "rgba(240,192,64,0.35)",  border: "rgba(240,192,64,0.2)" },
+  { suit: "♣", title: "Available 24/7",       desc: "Live support at any time — you'll never be left without help.",  color: "#00c254", glow: "rgba(0,194,84,0.35)",    border: "rgba(0,194,84,0.2)"   },
+  { suit: "♠", title: "Secure Transactions",  desc: "Deposits and withdrawals with end-to-end encryption.",          color: "#e63946", glow: "rgba(230,57,70,0.35)",   border: "rgba(230,57,70,0.2)"  },
+  { suit: "♥", title: "Expert Support",       desc: "A specialist team — real answers, not bots.",                   color: "#f0c040", glow: "rgba(240,192,64,0.35)",  border: "rgba(240,192,64,0.2)" },
 ];
 
 export function WhyChoose() {
@@ -38,7 +38,7 @@ export function WhyChoose() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-5"
             style={{ background: "rgba(0,194,84,0.08)", border: "1px solid rgba(0,194,84,0.35)", color: "#00c254" }}
           >
-            ♣ As Nossas Vantagens
+            ♣ Our Advantages
           </div>
           <h2
             className="mb-3"
@@ -50,7 +50,7 @@ export function WhyChoose() {
               textShadow: "0 0 40px rgba(0,194,84,0.12)",
             }}
           >
-            PORQUÊ{" "}
+            WHY{" "}
             <span
               style={{
                 background: "linear-gradient(90deg, #009940, #00c254, #00e061, #00c254, #009940)",
@@ -66,7 +66,7 @@ export function WhyChoose() {
             </span>
           </h2>
           <p style={{ color: "#555", fontSize: 14 }}>
-            A referência para jogadores portugueses que exigem o melhor
+            The go-to reference for players who demand the best
           </p>
         </motion.div>
 

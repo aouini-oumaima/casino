@@ -8,9 +8,9 @@ export function TopBar() {
     >
       <span className="font-black">18+</span>
       {" · "}
-      Jogue com responsabilidade
+      Gamble responsibly
       {" · "}
-      Precisa de apoio?{" "}
+      Need support?{" "}
       <a
         href="https://www.begambleaware.org"
         target="_blank"

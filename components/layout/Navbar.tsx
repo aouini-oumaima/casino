@@ -7,9 +7,9 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "Início",    href: "/" },
-  { label: "Sobre Nós", href: "/about" },
-  { label: "Contacto",  href: "/contact" },
+  { label: "Home",    href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact",  href: "/contact" },
 ];
 
 export function Navbar() {
@@ -95,7 +95,7 @@ export function Navbar() {
               className="btn-primary ml-4 px-5 py-2 rounded-lg text-sm"
               style={{ color: "#040a06" }}
             >
-              Jogar Agora ♠
+              Play Now ♠
             </Link>
           </div>
 
@@ -152,7 +152,7 @@ export function Navbar() {
                 className="btn-primary flex w-full mt-2 py-3 rounded-xl text-sm justify-center"
                 style={{ color: "#040a06" }}
               >
-                Jogar Agora ♠
+                Play Now ♠
               </Link>
             </div>
           </motion.div>

@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: "01", title: "Verificação de Licença",   desc: "Confirmamos licença SRIJ activa. Sem licença válida, não avaliamos.",                        color: "#e63946" },
-  { num: "02", title: "Auditoria de Segurança",   desc: "Verificamos SSL 256-bit, firewall e conformidade com RGPD.",                                  color: "#00c254" },
-  { num: "03", title: "Análise de Bónus",          desc: "Lemos todos os T&Cs — requisitos de apostas, limites e exclusões.",                           color: "#f0c040" },
-  { num: "04", title: "Teste de Jogos",            desc: "Testamos slots, mesa e live casino — verificando fairness e software.",                       color: "#e63946" },
-  { num: "05", title: "Teste de Pagamentos",       desc: "Realizamos depósitos e levantamentos reais — velocidade, limites, taxas.",                    color: "#00c254" },
-  { num: "06", title: "Avaliação de Suporte",      desc: "Avaliamos tempo de resposta, competência e disponibilidade do apoio ao cliente.",             color: "#f0c040" },
+  { num: "01", title: "Licence Check",      desc: "We confirm an active SRIJ licence. No valid licence — no review.",                          color: "#e63946" },
+  { num: "02", title: "Security Audit",     desc: "We verify 256-bit SSL, firewall and GDPR compliance.",                                      color: "#00c254" },
+  { num: "03", title: "Bonus Analysis",     desc: "We read all T&Cs — wagering requirements, limits and exclusions.",                          color: "#f0c040" },
+  { num: "04", title: "Games Testing",      desc: "We test slots, table games and live casino — checking fairness and software.",               color: "#e63946" },
+  { num: "05", title: "Payments Testing",   desc: "We make real deposits and withdrawals — speed, limits, fees.",                              color: "#00c254" },
+  { num: "06", title: "Support Evaluation", desc: "We assess response time, competence and availability of customer support.",                  color: "#f0c040" },
 ];
 
 export function ReviewProcess() {
@@ -34,10 +34,10 @@ export function ReviewProcess() {
               color: "#f8f8f8",
             }}
           >
-            Como <span className="green-text">Avaliamos</span> os Casinos
+            How We <span className="green-text">Review</span> Casinos
           </h2>
           <p className="text-sm" style={{ color: "#666" }}>
-            Processo rigoroso de 6 etapas — só aprovamos o que passou em tudo
+            A rigorous 6-step process — we only approve what passes everything
           </p>
         </motion.div>
 
